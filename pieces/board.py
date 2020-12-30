@@ -30,6 +30,7 @@ class Board:
                         temp_neighbor = self.grid[x + dir_x][y + dir_y]
                         if temp_neighbor.isAlive():
                             temp_cell.add_neighbor()
+                            
         # update grid
         for x in range(self.number_of_columns):  # O(n)
             for y in range(self.number_of_rows):  # O(n)
