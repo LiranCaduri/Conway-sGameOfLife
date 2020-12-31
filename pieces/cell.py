@@ -21,7 +21,6 @@ class Cell:
     def update(self, rules):
         birth, low, high = list(map(int, rules.values()))
         
-
         if self.isAlive() and low < self.alive_neighbors > high:
             self.state = 0
         elif not self.isAlive() and self.alive_neighbors == birth:

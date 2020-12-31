@@ -26,7 +26,7 @@ class Board:
             for y in range(self.number_of_rows): # O(n)
                 temp_cell = self.grid[x][y]
                 for dir_x, dir_y in self.direction_dict.values(): # O(n)
-                    if x + dir_x >= 0 and y + dir_y >= 0 and x + dir_x < 50 and y + dir_y < 50:
+                    if x + dir_x >= 0 and y + dir_y >= 0 and x + dir_x < Board.number_of_columns and y + dir_y < Board.number_of_rows:
                         temp_neighbor = self.grid[x + dir_x][y + dir_y]
                         if temp_neighbor.isAlive():
                             temp_cell.add_neighbor()
